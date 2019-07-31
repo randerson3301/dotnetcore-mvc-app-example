@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Produto>
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>App MVC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+    
+</head>
+<body>
+    <div class="m-1 p-1">
+        <h4 >@ViewBag.Message</h4>
+        <table class="table table-striped">
+            <thead>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Categoria</th>
+                <th>Preco</th>
+                
+            </thead>
+            <tbody>
+                @foreach (var p in Model)
+                {
+                    <tr>
+                        <td>@p.ProdutoId</td>
+                        <td>@p.Nome</td>
+                        <td>@p.Categoria</td>
+                        <td>@p.Preco.ToString("F2")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>>
